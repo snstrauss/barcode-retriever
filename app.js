@@ -28,7 +28,6 @@ function requestBarcodeFromOrca(code) {
     axios
       .get(`https://barcode.orcascan.com/?type=code128&data=${code}`)
       .then((barcodeResponse) => {
-        console.log(barcodeResponse);
         resolve(barcodeResponse.data);
       })
       .catch((err) => {
