@@ -10,6 +10,8 @@ app.use(express.json());
 app.post("/get-barcode", (req, res) => {
   const { code } = req.body;
 
+  console.log(`got request - ${code}`);
+
   if (code) {
     requestBarcodeFromOrca(code)
       .then((barcodeSvg) => {
@@ -21,6 +23,12 @@ app.post("/get-barcode", (req, res) => {
   } else {
     errorResponse(res, `'code' argument is missing!`);
   }
+});
+
+app.get("/hey", (req, res) => {
+  console.log("got `hey` request");
+
+  res.send("ho!");
 });
 
 function requestBarcodeFromOrca(code) {

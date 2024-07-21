@@ -2,10 +2,10 @@
   "name": "barcode-retriever",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "barcode-retriever.js",
   "scripts": {
-    "dev": "nodemon --inspect ./app.js",
-    "start": "node ./app.js"
+    "dev": "nodemon --inspect ./barcode-retriever.js",
+    "start": "node ./barcode-retriever.js"
   },
   "keywords": [],
   "author": "",
